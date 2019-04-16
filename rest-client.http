@@ -1,0 +1,65 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://{{host}}/accounts
+
+###
+
+POST http://{{host}}/accounts
+Content-Type: application/json
+
+{
+  "initialBalance": "45.67"
+}
+
+###
+
+POST http://{{host}}/accounts
+Content-Type: application/json
+
+{
+  "initialBalance": "98.99"
+}
+
+###
+
+GET http://{{host}}/transfers
+
+###
+
+POST http://{{host}}/transfers
+Content-Type: application/json
+
+{
+  "sourceAccountId": "15ce9a6e-986f-4755-9b1c-211ed260d651",
+  "destinationAccountId": "653f901c-07de-4051-bd0e-1046b330697d",
+  "amount": "25.67"
+}
+
+###
+
+POST http://{{host}}/transfers
+Content-Type: application/json
+
+{
+  "sourceAccountId": "same",
+  "destinationAccountId": "same",
+  "amount": "8.99"
+}
+
+###
+
+POST http://{{host}}/transfers
+Content-Type: application/json
+
+{
+  "sourceAccountId": "any",
+  "destinationAccountId": "other",
+  "amount": "0"
+}
+
+###
